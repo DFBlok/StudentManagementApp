@@ -1,0 +1,21 @@
+﻿@page
+@model StudentManagementApp.Pages.Students.CreateModel
+@{
+}
+<h2>Add New Student</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Name:</label>
+        <input asp-for="Student.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Age:</label>
+        <input asp-for="Student.Age" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Course:</label>
+        <input asp-for="Student.Course" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-page="Index" class="btn btn-secondary">Back</a>
+</form>

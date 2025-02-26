@@ -1,0 +1,32 @@
+﻿@page
+@model StudentManagementApp.Pages.Students.IndexModel
+@{
+}
+
+<h2>Student List</h2>
+<a asp-page="Create" class="btn btn-primary">Add New Student</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Actions</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model.students){
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Course</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@student.ID" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-page="Delete" asp-route-id="@student.ID" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
