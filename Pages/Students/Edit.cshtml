@@ -1,0 +1,30 @@
+﻿@page
+@model StudentManagementApp.Pages.Students.EditModel
+@{
+}
+
+<h2>Edit Student</h2>
+<form method="post">
+    <input type="hidden" asp-for="Student.ID" />
+
+    <div class="mb-3">
+        <label>Name:</label>
+        <input asp-for="Student.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Student.Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Age:</label>
+        <input asp-for="Student.Age" class="form-control" />
+        <span class="text-danger" asp-validation-for="Student.Age"></span>
+    </div>
+
+    <div class="mb-3">
+        <label>Course:</label>
+        <input asp-for="Student.Course" class="form-control" />
+        <span class="text-danger" asp-validation-for="Student.Course"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
